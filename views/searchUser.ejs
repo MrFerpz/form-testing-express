@@ -7,9 +7,11 @@
 </head>
 <body>
     <h1>User Search</h1>
-    <form action="/search" method="get">
-        <label for="name">First Name</label>
-        <input name="firstName">
+    <form action="/search/:firstName" method="get">
+        <label for="firstName">First Name</label>
+        <input name="firstName" type="text" id="firstName">
+        <button type="submit">Search</button>
     </form>
+    <a href="../">Home</a>
 </body>
 </html>

@@ -83,7 +83,12 @@ exports.deleteUserPost = (req, res) => {
     res.redirect("/")
 }
 
-exports.usersSearchGet = (req, res) => {
-  console.log(req.query)
-  res.render("searchResult")
+exports.usersSearchPageGet = (req, res) => {
+  res.render("searchUser");
+}
+
+exports.usersNameSearchGet = (req, res) => {
+  const user = usersStorage.getUserByName(req.query.firstName);
+  console.log(user);
+  res.render("searchResult", {user: user})
 }

@@ -7,7 +7,11 @@
 </head>
 <body>
     <h1>Search result</h1>
-    <div>User details</div>
+    <div><% if (user) {%></div>
+    <div>ID: <%= user.id %>, <br> Name: <%= user.firstName %> <%= user.lastName %> <br> Email: <%= user.email %> <br> Age: <%= user.age %> <br> Bio: <%= user.bio %></div>
+    <%} else {%>
+        <div>Oops! No matches found.</div>
+       <%}%>
     <a href="../">Home</a>
 </body>
 </html>
