@@ -82,3 +82,8 @@ exports.deleteUserPost = (req, res) => {
     usersStorage.deleteUser(req.params.id);
     res.redirect("/")
 }
+
+exports.usersSearchGet = (req, res) => {
+  console.log(req.query)
+  res.render("searchResult")
+}
